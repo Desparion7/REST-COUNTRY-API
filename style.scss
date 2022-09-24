@@ -1,11 +1,9 @@
 :root {
-	--dark-mode-elements: hsl(209, 23%, 22%);
-	--dark-mode-background: hsl(207, 26%, 17%);
-	--light-mode-text: hsl(200, 15%, 8%);
-	--light-mode-input: hsl(0, 0%, 52%);
-	--light-mode-backgorund: hsl(0, 0%, 98%);
-	--dark-mode-text: hsl(0, 0%, 100%);
-	--light-mode-elements: hsl(0, 0%, 100%);
+	--color-text: hsl(200, 15%, 8%);
+	--color-backgorund: hsl(0, 0%, 98%);
+	--color-elements: hsl(0, 0%, 100%);
+	--color-hover-text: hsl(0, 0%, 98%);
+	--color-hover-background: hsl(200, 15%, 8%);
 }
 
 * {
@@ -16,16 +14,23 @@
 body {
 	font-family: 'Nunito Sans', sans-serif;
 	font-size: 14px;
-	background-color: var(--light-mode-backgorund);
+	background-color: var(--color-backgorund);
+}
+body.dark {
+	--color-elements: hsl(209, 23%, 22%);
+	--color-backgorund: hsl(207, 26%, 17%);
+	--color-text: hsl(0, 0%, 100%);
+	--color-hover-text: hsl(200, 15%, 8%);
+	--color-hover-background: hsl(0, 0%, 98%);
 }
 
 main {
 	max-width: 1280px;
 	margin: 0 auto;
-	padding: 0 1em;
+	padding: 0 1.2em;
 }
 header {
-	background-color: var(--light-mode-elements);
+	background-color: var(--color-elements);
 	margin-bottom: 32px;
 }
 .header-content {
@@ -34,12 +39,24 @@ header {
 	justify-content: space-between;
 	margin: 0 auto;
 	padding: 32px;
+	color: var(--color-text);
 }
-header button {
+.dark-btn {
 	background: none;
 	border: none;
+	border-radius: 5px;
 	cursor: pointer;
 	font-size: 18px;
+	padding: 0 15px;
+	color: var(--color-text);
+	transition: color 0.3s, background 0.3s;
+}
+.dark-btn:hover {
+	color: var(--color-hover-text);
+	background: var(--color-hover-background);
+	.fa-moon {
+		color: var(--color-hover-text);
+	}
 }
 
 .filters {
@@ -58,20 +75,29 @@ header button {
 	padding: 15px 60px;
 	border-radius: 5px;
 	border: none;
-	background-color: var(--light-mode-backgorund);
+	color: var(--color-text);
+	background-color: var(--color-elements);
 	box-shadow: 24px 28px 22px -28px rgba(66, 68, 90, 1);
+}
+#query::placeholder {
+	color: var(--color-text);
 }
 .fa-magnifying-glass {
 	position: relative;
 	right: -35px;
+	color: var(--color-text);
 }
 .fa-moon {
 	margin-right: 10px;
+	color: var(--color-text);
+	transition: color 0.4s;
 }
 #region {
 	padding: 10px;
 	border: none;
 	border-radius: 5px;
+	background-color: var(--color-elements);
+	color: var(--color-text);
 }
 
 ul {
@@ -83,10 +109,9 @@ ul {
 li {
 	border-radius: 10px;
 	overflow: hidden;
-	box-shadow: 24px 28px 22px -28px rgba(66, 68, 90, 1);
 }
 li a {
-	color: var(--light-mode-text);
+	color: var(--color-text);
 	text-decoration: none;
 }
 li img {
@@ -95,6 +120,8 @@ li img {
 }
 .info-container {
 	padding: 30px 20px;
+	background-color: var(--color-elements);
+	height: 60%;
 }
 .country-name {
 	display: block;
@@ -114,7 +141,7 @@ li img {
 	.header-content {
 		padding: 24px 12px 12px;
 	}
-	header button {
+	.dark-btn {
 		font-size: 14px;
 	}
 	ul {
@@ -137,19 +164,20 @@ li img {
 }
 .detail-back-link {
 	display: inline-block;
-	color: var(--light-mode-text);
+	color: var(--color-text);
 	box-shadow: 0px 0px 10px -5px rgba(66, 68, 90, 1);
 	border-radius: 5px;
 	text-decoration: none;
 	padding: 5px 25px;
 	margin: 20px 10px;
-	background: transparent;
+	background: var(--color-elements);
 }
 .info-box {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 	margin-top: 50px;
+	color: var(--color-text);
 }
 .detail-container {
 	display: flex;
@@ -164,4 +192,41 @@ li img {
 	justify-content: space-between;
 	font-size: 16px;
 	margin-bottom: 20px;
+}
+@media only screen and (max-width: 600px) {
+	header {
+		margin-bottom: 10px;
+	}
+	.info-box {
+		flex-direction: column;
+		line-height: 30px;
+		margin-top: 10px;
+		img {
+			max-width: 100%;
+		}
+	}
+	.boxes {
+		display: block;
+		flex-direction: column;
+		align-content: space-between;
+	}
+	.detail-back-link {
+		padding: 0;
+	}
+}
+@media (prefers-color-scheme: dark) {
+	body {
+		--color-elements: hsl(209, 23%, 22%);
+		--color-backgorund: hsl(207, 26%, 17%);
+		--color-text: hsl(0, 0%, 100%);
+		--color-hover-text: hsl(200, 15%, 8%);
+		--color-hover-background: hsl(0, 0%, 98%);
+	}
+	body.light {
+		--color-text: hsl(200, 15%, 8%);
+		--color-backgorund: hsl(0, 0%, 98%);
+		--color-elements: hsl(0, 0%, 100%);
+		--color-hover-text: hsl(0, 0%, 98%);
+		--color-hover-background: hsl(200, 15%, 8%);
+	}
 }
