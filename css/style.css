@@ -1,0 +1,224 @@
+:root {
+  --dark-mode-elements: hsl(209, 23%, 22%);
+  --dark-mode-background: hsl(207, 26%, 17%);
+  --light-mode-text: hsl(200, 15%, 8%);
+  --light-mode-input: hsl(0, 0%, 52%);
+  --light-mode-backgorund: hsl(0, 0%, 98%);
+  --dark-mode-text: hsl(0, 0%, 100%);
+  --light-mode-elements: hsl(0, 0%, 100%);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  background-color: var(--light-mode-backgorund);
+}
+
+main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+header {
+  background-color: var(--light-mode-elements);
+  margin-bottom: 32px;
+}
+
+.header-content {
+  max-width: 1280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+header button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.filters {
+  display: none;
+}
+
+.filters.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+#query {
+  width: 400px;
+  padding: 15px 60px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--light-mode-backgorund);
+  -webkit-box-shadow: 24px 28px 22px -28px #42445a;
+          box-shadow: 24px 28px 22px -28px #42445a;
+}
+
+.fa-magnifying-glass {
+  position: relative;
+  right: -35px;
+}
+
+.fa-moon {
+  margin-right: 10px;
+}
+
+#region {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 60px;
+  list-style: none;
+}
+
+li {
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-box-shadow: 24px 28px 22px -28px #42445a;
+          box-shadow: 24px 28px 22px -28px #42445a;
+}
+
+li a {
+  color: var(--light-mode-text);
+  text-decoration: none;
+}
+
+li img {
+  aspect-ratio: 160/98;
+  width: 100%;
+}
+
+.info-container {
+  padding: 30px 20px;
+}
+
+.country-name {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+  ul {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 18px;
+  }
+  .header-content {
+    padding: 24px 12px 12px;
+  }
+  header button {
+    font-size: 14px;
+  }
+  ul {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .filters {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 30px;
+  }
+  #query {
+    width: 250px;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+  }
+  .fa-magnifying-glass {
+    position: relative;
+    right: -20px;
+  }
+}
+
+.detail-back-link {
+  display: inline-block;
+  color: var(--light-mode-text);
+  -webkit-box-shadow: 0px 0px 10px -5px #42445a;
+          box-shadow: 0px 0px 10px -5px #42445a;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 5px 25px;
+  margin: 20px 10px;
+  background: transparent;
+}
+
+.info-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 50px;
+}
+
+.detail-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.country-name {
+  font-size: 24px;
+}
+
+.boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+/*# sourceMappingURL=style.css.map */

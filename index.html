@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>REST COUNTRY API</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/efe1cde7b5.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<header>
+			<div class="header-content">
+				<h1>Where in the word?</h1>
+				<button><i class="fa-solid fa-moon"></i>Dark Mode</button>
+			</div>
+		</header>
+		<div class="filters">
+			<div class="search-box">
+				<span><i class="fa-solid fa-magnifying-glass"></i></span>
+				<input
+					type="text"
+					id="query"
+					placeholder="Search for the country...                             "
+				/>
+			</div>
+			<select name="region" id="region">
+				<option value="">Filter by region</option>
+				<option value="Africa">Africa</option>
+				<option value="Americas">Americas</option>
+				<option value="Asia">Asia</option>
+				<option value="Europe">Europe</option>
+				<option value="Oceania">Oceania</option>
+			</select>
+		</div>
+		<main id="root"></main>
+
+		<script type="module" src="./view-dashboard.js"></script>
+		<script type="module" src="./view-detail.js"></script>
+		<script type="module" src="./render.js"></script>
+		<script type="module" src="./script.js"></script>
+	</body>
+</html>
