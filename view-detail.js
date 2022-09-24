@@ -4,7 +4,7 @@ export const renderDetail = () => {
 	const countryCode = searchParams.get('country');
 
 	if (!countryCode) {
-		window.location.href = '/';
+		window.location.href = '/REST-COUNTRY-API/';
 	}
 
 	const API_URL_DETAIL = `https://restcountries.com/v3.1/alpha/${countryCode}`;
@@ -35,5 +35,5 @@ export const renderDetail = () => {
 };
 
 const goBackToDashboard = () => {
-	window.location.href = '/';
+	window.location.href = '/REST-COUNTRY-API/';
 };

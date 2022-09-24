@@ -90,7 +90,7 @@ const createBackButtonElement = () => {
 	const anchorElement = document.createElement('a');
 	anchorElement.innerHTML = `<i class="fa-solid fa-arrow-left-long"></i> Back`;
 	anchorElement.classList.add('detail-back-link');
-	anchorElement.href = '/';
+	anchorElement.href = '/REST-COUNTRY-API/';
 	return anchorElement;
 };
 const createBorderCountryLink = (text, link) => {
