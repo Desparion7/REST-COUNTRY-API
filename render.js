@@ -110,7 +110,7 @@ const createBorderCountriesContainer = (country) => {
 
 	country.borders.forEach((border) => {
 		borderCountriesBox.appendChild(
-			createBorderCountryLink(border, `/?country=${border}`)
+			createBorderCountryLink(border, `/REST-COUNTRY-API/?country=${border}`)
 		);
 	});
 	return borderCountriesBox;
