@@ -1,4 +1,4 @@
-import { renderCountriesList } from '/render.js';
+import { renderCountriesList } from './render.js';
 export const renderDashboard = () => {
 	const API_URL_ALL = 'https://restcountries.com/v3.1/all';
  

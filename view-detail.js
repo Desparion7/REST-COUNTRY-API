@@ -1,4 +1,4 @@
-import { renderCountryDetails } from '/render.js';
+import { renderCountryDetails } from './render.js';
 export const renderDetail = () => {
 	const searchParams = new URLSearchParams(window.location.search);
 	const countryCode = searchParams.get('country');
